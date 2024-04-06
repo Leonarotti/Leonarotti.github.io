@@ -1,0 +1,314 @@
+[
+    {
+        "dni": "01-1740-0587",
+        "nombre": "Dr. Jafeth Martínez",
+        "especialidad": "Cardiología",
+        "ubicacion": "Ciudad X",
+        "telefono": "123456789",
+        "correo": "juan.perez@example.com",
+        "calificacion": 4.7,
+        "bio": "El Dr. Jafeth Martínez es un reconocido cardiólogo con más de 10 años de experiencia.",
+        "horario": {
+            "V": {
+                "inicio": "08:00",
+                "fin": "12:00"
+            },
+            "S": {
+                "inicio": "08:00",
+                "fin": "12:00"
+            },
+            "D": {
+                "inicio": "08:00",
+                "fin": "12:00"
+            }
+        }
+    },
+    {
+        "dni": "02-3456-7890",
+        "nombre": "Dra. María Gómez",
+        "especialidad": "Pediatría",
+        "ubicacion": "Ciudad Y",
+        "telefono": "987654321",
+        "correo": "maria.gomez@example.com",
+        "calificacion": 4.8,
+        "bio": "La Dra. María Gómez es una pediatra comprometida con la salud infantil.",
+        "horario": {
+            "L": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            },
+            "X": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            },
+            "V": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            }
+        }
+    },
+    {
+        "dni": "03-6789-0123",
+        "nombre": "Dr. Raul Fuentes",
+        "especialidad": "Radiología",
+        "ubicacion": "Ciudad X",
+        "telefono": "234567890",
+        "correo": "raul.fuentes@example.com",
+        "calificacion": 4.5,
+        "bio": "El Dr. Raul Fuentes es un radiólogo experto en diagnósticos por imágenes.",
+        "horario": {
+            "L": {
+                "inicio": "10:00",
+                "fin": "14:00"
+            },
+            "X": {
+                "inicio": "10:00",
+                "fin": "14:00"
+            },
+            "V": {
+                "inicio": "10:00",
+                "fin": "14:00"
+            }
+        }
+    },
+    {
+        "dni": "04-9012-3456",
+        "nombre": "Dra. Mariana Soles",
+        "especialidad": "Ginecología",
+        "ubicacion": "Ciudad Z",
+        "telefono": "345678901",
+        "correo": "mariana.soles@example.com",
+        "calificacion": 4.6,
+        "bio": "La Dra. Mariana Soles brinda atención especializada en ginecología y obstetricia.",
+        "horario": {
+            "L": {
+                "inicio": "08:00",
+                "fin": "12:00"
+            },
+            "M": {
+                "inicio": "08:00",
+                "fin": "12:00"
+            },
+            "X": {
+                "inicio": "08:00",
+                "fin": "12:00"
+            }
+        }
+    },
+    {
+        "dni": "05-5555-5555",
+        "nombre": "Dr. Gregory House",
+        "especialidad": "Medicina Interna",
+        "ubicacion": "Ciudad X",
+        "telefono": "456789012",
+        "correo": "gregory.house@example.com",
+        "calificacion": 4.7,
+        "bio": "El Dr. Gregory House es un médico especialista en diagnóstico clínico y medicina interna.",
+        "horario": {
+            "L": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            },
+            "M": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            },
+            "X": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            },
+            "J": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            },
+            "V": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            },
+            "S": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            }
+        }
+    },
+    {
+        "dni": "06-5678-9012",
+        "nombre": "Dra. Elizabeth Lauwers",
+        "especialidad": "Cardiología",
+        "ubicacion": "Ciudad Y",
+        "telefono": "567890123",
+        "correo": "elizabeth.lauwers@example.com",
+        "calificacion": 4.9,
+        "bio": "La Dra. Elizabeth Lauwers es una cardióloga altamente calificada con una larga trayectoria en el tratamiento de enfermedades del corazón.",
+        "horario": {
+            "L": {
+                "inicio": "10:00",
+                "fin": "14:00"
+            },
+            "M": {
+                "inicio": "10:00",
+                "fin": "14:00"
+            },
+            "X": {
+                "inicio": "10:00",
+                "fin": "14:00"
+            }
+        }
+    },
+    {
+        "dni": "07-8901-2345",
+        "nombre": "Dra. Mario Gómez",
+        "especialidad": "Pediatría",
+        "ubicacion": "Ciudad Z",
+        "telefono": "678901234",
+        "correo": "mario.gomez@example.com",
+        "calificacion": 4.5,
+        "bio": "La Dra. Mario Gómez se dedica a brindar atención médica integral a niños y adolescentes.",
+        "horario": {
+            "M": {
+                "inicio": "08:00",
+                "fin": "12:00"
+            },
+            "J": {
+                "inicio": "08:00",
+                "fin": "12:00"
+            },
+            "S": {
+                "inicio": "08:00",
+                "fin": "12:00"
+            }
+        }
+    },
+    {
+        "dni": "08-0123-4567",
+        "nombre": "Dr. Simon Douglas",
+        "especialidad": "Radiología",
+        "ubicacion": "Ciudad X",
+        "telefono": "789012345",
+        "correo": "simon.douglas@example.com",
+        "calificacion": 4.6,
+        "bio": "El Dr. Simon Douglas es un experto en radiología intervencionista y diagnóstico por imágenes.",
+        "horario": {
+            "M": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            },
+            "X": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            },
+            "V": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            }
+        }
+    },
+    {
+        "dni": "01-1111-1111",
+        "nombre": "Dra. Isabella Olsen",
+        "especialidad": "Nutrición",
+        "ubicacion": "Ciudad Y",
+        "telefono": "890123456",
+        "correo": "isabella.olsen@example.com",
+        "calificacion": 4.8,
+        "bio": "La Dra. Isabella Olsen es una nutricionista con enfoque holístico y experiencia en el manejo de enfermedades relacionadas con la alimentación.",
+        "horario": {
+            "L": {
+                "inicio": "10:00",
+                "fin": "14:00"
+            },
+            "X": {
+                "inicio": "10:00",
+                "fin": "14:00"
+            },
+            "V": {
+                "inicio": "10:00",
+                "fin": "14:00"
+            }
+        }
+    },
+    {
+        "dni": "10-9012-3456",
+        "nombre": "Dr. Ali Kutrapali",
+        "especialidad": "Medicina Interna",
+        "ubicacion": "Ciudad X",
+        "telefono": "901234567",
+        "correo": "ali.kutrapali@example.com",
+        "calificacion": 4.7,
+        "bio": "El Dr. Ali Kutrapali es un médico especialista en diagnóstico médico con habilidades avanzadas en técnicas de imagenología.",
+        "horario": {
+            "L": {
+                "inicio": "08:00",
+                "fin": "12:00"
+            },
+            "M": {
+                "inicio": "08:00",
+                "fin": "12:00"
+            },
+            "V": {
+                "inicio": "08:00",
+                "fin": "12:00"
+            },
+            "S": {
+                "inicio": "08:00",
+                "fin": "12:00"
+            },
+            "D": {
+                "inicio": "08:00",
+                "fin": "12:00"
+            }
+        }
+    },
+    {
+        "dni": "11-0123-4567",
+        "nombre": "Dra. Riana Martinez",
+        "especialidad": "Pediatría",
+        "ubicacion": "Ciudad Z",
+        "telefono": "012345678",
+        "correo": "riana.martinez@example.com",
+        "calificacion": 4.7,
+        "bio": "La Dra. Riana Martinez se especializa en el cuidado integral de la salud infantil y el desarrollo pediátrico.",
+        "horario": {
+            "L": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            },
+            "M": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            },
+            "J": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            }
+        }
+    },
+    {
+        "dni": "02-2222-2222",
+        "nombre": "Dr. Jean Carlo",
+        "especialidad": "Odontología",
+        "ubicacion": "Ciudad Z",
+        "telefono": "012345678",
+        "correo": "jean.carlo@example.com",
+        "calificacion": 4.8,
+        "bio": "El odontologo Jean Carlo es un reconocido dentista egresado de la UCR con honores.",
+        "horario": {
+            "L": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            },
+            "M": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            },
+            "J": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            },
+            "V": {
+                "inicio": "09:00",
+                "fin": "13:00"
+            }
+        }
+    }
+]

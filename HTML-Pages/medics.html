@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Árbol de Seda</title>
+    <link rel="shortcut icon" href="/assets/logo-clinica.webp" type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="/CSS/medics.css">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="container-medics">
+            <h1>Búsqueda de Médicos</h1>
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Buscar médicos ..." autofocus>
+                <button id="search-btn">Buscar</button>
+            </div>
+            <div id="order-by-container">
+                <label for="order-by-select">Ordenar por:</label>
+                <select id="order-by-select">
+                    <option value="nombre">Nombre</option>
+                    <option value="especialidad">Especialidad</option>
+                    <option value="ubicacion">Ubicación</option>
+                    <option value="calificacion">Calificación</option>
+                </select>
+            </div>
+            <div id="results-container">
+            </div>
+        </div>
+
+        <!-- Modal para mostrar los detalles del médico -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <!-- Contenido de los detalles del médico -->
+            </div>
+        </div>
+
+    </main>
+    <footer></footer>
+    <script src="/JS/menu.js"></script>
+    <script src="/JS/medicsData.js"></script>
+    <script src="/JS/medics.js"></script>
+</body>
+
+</html>

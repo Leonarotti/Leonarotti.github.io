@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Árbol de Seda</title>
+  <link rel="shortcut icon" href="/assets/logo-clinica.webp" type="image/x-icon">
+  <link rel="stylesheet" href="/CSS/styles.css">
+  <link rel="stylesheet" href="/CSS/agenda.css">
+</head>
+
+<body>
+  <header></header>
+  <main class="container">
+    <div id="container-calendar">
+      <div class="calendar">
+        <div class="header">
+          <div class="month"></div>
+          <div class="btns">
+            <div class="btn today-btn">
+              <img src="/assets/bxs-calendar-event.svg" alt="hoy">
+            </div>
+            <div class="btn prev-btn">
+              <img src="/assets/bx-chevron-left.svg" alt="flecha izquierda">
+            </div>
+            <div class="btn next-btn">
+              <img src="/assets/bx-chevron-right.svg" alt="flecha derecha">
+            </div>
+          </div>
+        </div>
+        <div class="weekdays">
+          <div class="day">Do</div>
+          <div class="day">Lu</div>
+          <div class="day">Ma</div>
+          <div class="day">Mi</div>
+          <div class="day">Ju</div>
+          <div class="day">Vi</div>
+          <div class="day">Sa</div>
+        </div>
+        <div class="days">
+          <!-- lets add days using js -->
+        </div>
+      </div>
+
+      <div id="appointment-container">
+        <h2>Citas Agendadas</h2>
+        <div id="appointments" class="appointments">
+        </div>
+
+        <div id="appointment-form">
+          <form id="new-appointment-form">
+            <div class="date-input-container">
+              <label for="date">Fecha:</label>
+              <input type="date" id="date" readonly required>
+            </div>
+    
+            <label for="specialty">Especialidad:</label>
+            <select id="specialty">
+              <option value="1">Selecciona una especialidad...</option>
+            </select><br>
+            <label for="doctor">Médico:</label>
+            <select id="doctor">
+              <option value="1">Selecciona una especialidad...</option>
+            </select><br>
+    
+            <select id="schedule" disabled>
+              <option value="">Selecciona una fecha y hora</option>
+            </select><br>
+    
+            <button id="scheduleAppointmentButton" type="submit" disabled>Agendar Cita</button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+    <button id="showHistoryButton">Mostrar Historial de Citas</button>
+
+    <div id="table-container">
+      <table id="appointments-table">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Especialidad</th>
+            <th>Médico</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <!-- Aquí se agregarán las filas de la tabla -->
+        </tbody>
+      </table>
+    </div>
+    
+  </main>
+  <footer></footer>
+  <script src="/JS/menu.js"></script>
+  <script src="/JS/medicsData.js"></script>
+  <script src="/JS/agenda.js"></script>
+</body>
+
+</html>

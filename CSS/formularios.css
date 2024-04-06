@@ -1,0 +1,74 @@
+section {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+section h1 {
+    font-size: 3em;
+}
+
+section h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 2.5em;
+}
+
+section form {
+    padding: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    border-radius: 20px;
+    background-color: var(--bg-form-color);
+    border: 2px solid rgba(0, 0, 0, .1);
+    margin-top: 1em;
+}
+
+section form label {
+    width: 100%;
+    padding: 0.2em;
+    margin-bottom: 0.5;
+}
+
+section form input, section form textarea {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.8em;
+    border-radius: 9px;
+    border: none;
+    outline-color: var(--primary-color);
+    background-color: var(--bg-color);
+}
+
+section form input[type="submit"] {
+    margin-top: 1.5em;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: var(--time-transition);
+}
+
+section form input[type="submit"]:hover{
+    margin-top: 1.5em;
+    background-color: var(--tertiary-color);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section p{
+    margin-top: 1.5em;
+}
+
+section p a{
+    color: var(--primary-color);
+}
+
+.error{
+    outline-color: #B10306;
+}
+

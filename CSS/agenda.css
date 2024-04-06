@@ -1,0 +1,609 @@
+/* Calendario *//* Calendario */
+
+body {
+  background-color: #f9f9f9;
+}
+
+.container{
+  text-align: center;
+}
+
+#container-calendar {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 1em auto;
+}
+
+.calendar {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  background-color: var(--bg-form-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 1em;
+}
+
+.calendar .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.calendar .header .month {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.calendar .header .btns {
+  display: flex;
+  gap: 10px;
+}
+
+.calendar .header .btns .btn {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--primary-color);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.calendar .header .btns .btn:hover {
+  background-color: var(--tertiary-color);
+  transform: scale(1.05);
+}
+
+.weekdays {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.weekdays .day {
+  width: calc(100% / 7 - 10px);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.days .day {
+  width: calc(100% / 7 - 10px);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: #fff;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.days .day:not(.next):not(.prev):hover {
+  color: #fff;
+  background-color: var(--primary-color);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.days .day.today {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+.days .day.next,
+.days .day.prev {
+  color: #ccc;
+}
+
+.days .day.selected {
+  color: #fff;
+  background-color: var(--tertiary-color);
+}
+
+.days .day.user-appointment::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  /* Puedes ajustar el color del círculo aquí */
+}
+
+/* Calendario */
+
+/* Contenedor de citas */
+
+#appointment-container {
+  background-color: var(--bg-form-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  display: none;
+}
+
+.appointments {
+  display: grid;
+  gap: 20px;
+}
+
+.appointment {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.appointment p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.appointment button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.appointment button.cancel {
+  background-color: #FF5733;
+  color: white;
+}
+
+.appointment button.approve {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.appointment button:hover {
+  filter: brightness(1.2);
+}
+/* Contenedor de citas */
+
+/* Programar cita */
+#appointment-form {
+  background-color: var(--bg-form-color);
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  display: none;
+}
+
+#appointment-form h2 {
+  margin-top: 0;
+}
+
+#appointment-form label {
+  display: block;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+#appointment-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.date-input-container {
+  display: flex;
+  align-items: center;
+}
+
+#appointment-form input[type="date"] {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+#schedule {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#appointment-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+#appointment-form button:hover {
+  background-color: var(--tertiary-color);
+  transform: scale(1.01);
+}
+
+#appointment-form button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transition: none;
+}
+/*Programar citas*/
+
+
+
+#container-calendar {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 1em auto;
+}
+
+.calendar {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  background-color: var(--bg-form-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 1em;
+}
+
+.calendar .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.calendar .header .month {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.calendar .header .btns {
+  display: flex;
+  gap: 10px;
+}
+
+.calendar .header .btns .btn {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--primary-color);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.calendar .header .btns .btn:hover {
+  background-color: var(--tertiary-color);
+  transform: scale(1.05);
+}
+
+.weekdays {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.weekdays .day {
+  width: calc(100% / 7 - 10px);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.days .day {
+  width: calc(100% / 7 - 10px);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: #fff;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.days .day:not(.next):not(.prev):hover {
+  color: #fff;
+  background-color: var(--primary-color);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.days .day.today {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+.days .day.next,
+.days .day.prev {
+  color: #ccc;
+}
+
+.days .day.selected {
+  color: #fff;
+  background-color: var(--tertiary-color);
+}
+
+.days .day.user-appointment::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  /* Puedes ajustar el color del círculo aquí */
+}
+
+/* Calendario */
+
+/* Programar cita */
+#appointment-form {
+  background-color: var(--bg-form-color);
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  display: none;
+}
+
+#appointment-form h2 {
+  margin-top: 0;
+}
+
+#appointment-form label {
+  display: block;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+#appointment-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.date-input-container {
+  display: flex;
+  align-items: center;
+}
+
+#appointment-form input[type="date"] {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+#schedule {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#appointment-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+#appointment-form button:hover {
+  background-color: var(--tertiary-color);
+  transform: scale(1.01);
+}
+
+#appointment-form button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transition: none;
+}
+/*Programar citas*/
+
+/* Contenedor de citas */
+
+#appointment-container {
+  background-color: var(--bg-form-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  display: none;
+  text-align: justify;
+}
+
+#appointment-container h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.appointments {
+  display: grid;
+  gap: 20px;
+}
+
+.appointment {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.appointment p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.appointment button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.appointment button.cancel {
+  background-color: #FF5733;
+  color: white;
+}
+
+.appointment button.approve {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.appointment button:hover {
+  filter: brightness(1.2);
+}
+/* Contenedor de citas */
+
+
+/* Historial de citas */
+#showHistoryButton {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+  margin-bottom: 1em;
+}
+
+#showHistoryButton:hover {
+  background-color: var(--tertiary-color);
+  transform: scale(1.02);
+}
+
+#showHistoryButton:focus {
+  outline: none;
+}
+
+#table-container {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-x: auto;
+  display: none;
+}
+
+#appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#appointments-table th,
+#appointments-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+#appointments-table th {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+#appointments-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#appointments-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Tabla de historial de citas */
+
+@media (max-width: 950px) {
+  #container-calendar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  #table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
