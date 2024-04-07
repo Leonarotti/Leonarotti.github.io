@@ -20,8 +20,8 @@
                 maxlength="12" placeholder="01-1790-0928" required autofocus>
 
             <label for="">Contraseña</label>
-            <input id="password" type="password" placeholder="..."
-                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,11}"
+            <input id="password" type="password" placeholder="..." maxlength="11"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#])[A-Za-z\d$@$!%*?&#]{8,11}$"
                 title="La contraseña debe tener al menos una letra minúscula, una letra mayúscula, un dígito, un carácter especial y una longitud de 8 a 11 caracteres"
                 required>
 

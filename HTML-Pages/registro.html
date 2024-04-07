@@ -30,17 +30,17 @@
                 title="Debe tener el formato ####-####" maxlength="9" required>
 
             <label for="">Correo</label>
-            <input id="email" type="email" placeholder="ejemplo@correo.com"
-                title="Debe tener el formato ##@####.###" required>
+            <input id="email" type="email" placeholder="ejemplo@correo.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Debe tener el formato de un correo electrónico ##@####.###"
+                required>
 
             <label for="">Contraseña</label>
-            <input id="password" type="password" placeholder="..."
-                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,11}"
+            <input id="password" type="password" placeholder="..." maxlength="11"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#])[A-Za-z\d$@$!%*?&#]{8,11}$"
                 title="La contraseña debe tener al menos una letra minúscula, una letra mayúscula, un dígito, un carácter especial y una longitud de 8 a 11 caracteres"
                 required>
 
             <label>Confirmar Contraseña:</label>
-            <input id="confirmationPassword" type="password" placeholder="..." required>
+            <input id="confirmationPassword" type="password" placeholder="..." maxlength="11" required>
 
             <input type="submit" value="Registrar">
 
