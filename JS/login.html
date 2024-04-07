@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Árbol de Seda</title>
+    <link rel="shortcut icon" href="/assets/logo-clinica.webp" type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="/CSS/formularios.css">
+</head>
+
+<body>
+    <header></header>
+    <section>
+        <h2>Iniciar Sesión</h2>
+        <form action="" id="loginForm">
+            <label>Número de cédula</label>
+            <input id="dni" type="text" pattern="\d{2}-\d{4}-\d{4}" title="Debe tener el formato ##-####-####"
+                maxlength="12" placeholder="01-1790-0928" required autofocus>
+
+            <label for="">Contraseña</label>
+            <input id="password" type="password" placeholder="..." maxlength="11"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#])[A-Za-z\d$@$!%*?&#]{8,11}$"
+                title="La contraseña debe tener al menos una letra minúscula, una letra mayúscula, un dígito, un carácter especial y una longitud de 8 a 11 caracteres"
+                required>
+
+            <input type="submit" value="Ingresar">
+        </form>
+        <p>¿No tienes una cuenta?<a href="/HTML-Pages/registro.html"> Regístrate</a></p>
+        <p>¡Soy Médico!<a href="/HTML-Pages/loginMedico.html"> Iniciar Sesión como Médico</a></p>
+        <p>¡Olvidé la contraseña!<a href="/HTML-Pages/recuperacion.html"> Recuperar Contraseña</a></p>
+    </section>
+    <footer></footer>
+    <script src="/JS/menu.js"></script>
+    <script src="/JS/login.js"></script>
+</body>
+
+</html>
